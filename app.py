@@ -660,7 +660,7 @@ async def MaiiiinE():
     flask_thread = threading.Thread(target=run_flask, daemon=True)
     flask_thread.start()
 
-    await asyncio.gather(task1, task2)
+    
 
 
 async def StarTinG():
