@@ -657,8 +657,8 @@ async def MaiiiinE():
     print(f"\n - BoT STarTinG And OnLine on TarGet : {TarGeT} | BOT NAME : {acc_name}")
     print(" - BoT sTaTus > GooD | OnLinE ! (: \n")
 
-    flask_thread = threading.Thread(target=run_flask, daemon=True)
-    flask_thread.start()
+    
+   
 
     
 
