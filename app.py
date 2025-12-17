@@ -676,9 +676,7 @@ async def StarTinG():
 def start_async_background():
     asyncio.run(StarTinG())
 
-@app.before_first_request
-def launch_background():
-    threading.Thread(
-        target=start_async_background,
-        daemon=True
-    ).start()
+threading.Thread(
+    target=start_async_background,
+    daemon=True
+).start()
