@@ -673,7 +673,12 @@ async def StarTinG():
             print(f"ErroR TcP - {e} => ResTarTinG ...")
 
 
-threading.Thread(
-    target=lambda: asyncio.run(StarTinG()),
-    daemon=True
-).start()
+def start_async_background():
+    asyncio.run(StarTinG())
+
+@app.before_first_request
+def launch_background():
+    threading.Thread(
+        target=start_async_background,
+        daemon=True
+    ).start()
