@@ -668,10 +668,10 @@ async def StarTinG():
         try:
             await asyncio.wait_for(MaiiiinE(), timeout=7 * 60 * 60)
         except asyncio.TimeoutError:
-            print("Token ExpiRed ! , ResTartinG")
-        except Exception as e:
-            print(f"ErroR TcP - {e} => ResTarTinG ...")
-
+            print("Token Expired !, ReStarting")
+        except Exception:
+            import traceback
+            traceback.print_exc()
 
 def start_async_background():
     asyncio.run(StarTinG())
